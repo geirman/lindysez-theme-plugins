@@ -1,0 +1,190 @@
+
+
+#main {
+	width:100%;
+	margin:15px 0px 10px 0px;
+	float:left;
+}
+
+#images {
+	display:none;	
+}
+
+.panel {
+	float:right;	
+	width:315px;
+}
+
+ul.exposureThumbs {
+
+	border-right:none;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	float:left;
+	width:100%;
+}
+#exposure {
+width:592px!important;
+height:284px!important;
+}
+
+ul.exposureThumbs li {
+	margin:0 0 12px 0;
+	padding:0;
+	text-align:center;
+	display:none;
+	float:left;
+	width:132px;
+	}
+
+ul.exposureThumbs li img {
+	cursor:pointer;
+	width:100%;
+	background:url(../images/frame-142x119.png) top left no-repeat;
+	padding:5px 5px 14px 5px;
+	height:100%;
+}
+
+ul.exposureThumbs li.last {
+	margin:0;	
+}
+
+.exposureTarget {
+	width:800px;
+	height:600px;
+	
+	background-image:url(res/loader.gif);
+	background-repeat:no-repeat;
+	background-position:center center;
+	float:left;	
+	padding:0;
+	margin:0;
+	position:relative;
+	overflow:hidden; 
+}
+
+.exposureWrapper {
+	position:absolute; 
+	top:0; 
+	left:0;
+	height:100%;
+	width:100%;
+
+}
+
+.exposureWrapper img {
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	left:0;
+
+	background:url("../images/single-img-frame.png") no-repeat scroll left top / 578px 281px rgba(0, 0, 0, 0);
+		padding:7px 10px 12px 8px;
+}
+
+.exposureLoaded {
+	background-image:none;	
+}
+
+.exposureData {
+	position:absolute;
+ 	left:0;
+ 	right:0;
+ 	bottom:0;
+	height:60px;
+	padding:7px;
+	background-image:url(res/veil.png);
+	color:#fff;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size:16px;
+	font-weight:bold;
+}
+
+/* In this demo we are using thumbs with fixed size */
+ul.exposureThumbs li {
+	width:142px;
+	height:119px!important;
+	float:left;
+	margin-left:10px!important;
+	margin-bottom:10px!important;
+}
+.exposureControls {
+	text-align: center;
+	width: 24%;
+	margin: auto;
+	float: none;
+	padding-bottom: 14px;
+	margin-bottom: 12px;
+}
+
+.exposureSlideshowControls a,
+.exposureControls span,
+.exposureControls a {
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size:11px;
+	padding:8px;
+	background-color:#555;
+	display:block;
+	float:left;
+}
+
+.exposureSlideshowControls a {
+	float:right;	
+}
+
+.exposureSlideshowControls a,
+.exposureControls a {
+	color: #ccc;
+	text-decoration: none;
+	outline: none;
+	padding: 2px 7px;
+}
+.exposurePaging{
+	display:none;
+}
+.exposurePrevPage{
+	border-radius: 7px 0px 0px 7px;
+	padding-right: 30px !important;
+	background: url(../images/carnav-arrows.png) 9px 5px no-repeat;
+	text-indent: -9999px;
+}
+.exposureNextPage{
+	border-radius: 0px 7px 7px 0px;
+	padding-left: 15px !important;
+	background: url(../images/carnav-arrows.png) -26px 5px no-repeat;
+	text-indent: -9999px;
+	margin-left: 0px;
+	width: 34px;
+}
+
+.exposureSlideshowControls a:active,
+.exposureSlideshowControls a:hover,
+.exposureControls a:active,
+.exposureControls a:hover {
+	background-color:#444;
+	color:#ddd;
+}
+
+.exposurePaging .active {
+	color:#fff;
+	background-color:#111;	
+}
+
+.clear {
+	clear:both;	
+}
+
+p.info {
+	margin:40px auto;
+	text-align:center;	
+	width:600px;
+}
+
+p.info a {
+	color:#006fc0;	
+}
+
+p.info a:hover, p.info a:active {
+	color:#0084e7;	
+}

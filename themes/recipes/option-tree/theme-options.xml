@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<wp_option_tree>
+  <row>
+    <id>1</id>
+    <item_id>general_default</item_id>
+    <item_title>Home Page</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>2</id>
+    <item_id>header_logo_image</item_id>
+    <item_title>Header Logo</item_title>
+    <item_desc>Logo of your site.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>3</id>
+    <item_id>favicon</item_id>
+    <item_title>Favicon</item_title>
+    <item_desc>Upload your favicon in PNG format.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>4</id>
+    <item_id>slider_type</item_id>
+    <item_title>Select Home Page Slider</item_title>
+    <item_desc>Select the Slider Type from given list.</item_desc>
+    <item_type>select</item_type>
+    <item_options>Left Image Slider, Basic Slider, Nivo Slider, Thumbnail Slider, Accordion Slider</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>5</id>
+    <item_id>whats_hot1</item_id>
+    <item_title>First Whats Hot Recipe</item_title>
+    <item_desc>Select first item for whats hot area</item_desc>
+    <item_type>custom_post</item_type>
+    <item_options>recipe</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>6</id>
+    <item_id>whats_hot2</item_id>
+    <item_title>Second Whats Hot Recipe</item_title>
+    <item_desc>Select second item for whats hot area</item_desc>
+    <item_type>custom_post</item_type>
+    <item_options>recipe</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>7</id>
+    <item_id>whats_hot3</item_id>
+    <item_title>Third Whats Hot Recipe</item_title>
+    <item_desc>Select third item for whats hot area</item_desc>
+    <item_type>custom_post</item_type>
+    <item_options>recipe</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>8</id>
+    <item_id>whats_hot4</item_id>
+    <item_title>Fourth Whats Hot Recipe</item_title>
+    <item_desc>Select fourth item for whats hot area</item_desc>
+    <item_type>custom_post</item_type>
+    <item_options>recipe</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>9</id>
+    <item_id>left_image_slider</item_id>
+    <item_title>Left Image Slider</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>10</id>
+    <item_id>l_slider_statement</item_id>
+    <item_title>Slider Statement</item_title>
+    <item_desc>Enter statement for slider.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>11</id>
+    <item_id>right_info_slider</item_id>
+    <item_title>Right Info Slider</item_title>
+    <item_desc>Give your required recipe post IDs for each slide.</item_desc>
+    <item_type>slider</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>12</id>
+    <item_id>basic_slider</item_id>
+    <item_title>Basic Slider</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>13</id>
+    <item_id>b_slider_statement</item_id>
+    <item_title>Slider Statement</item_title>
+    <item_desc>Enter Slider Heading Statement</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>14</id>
+    <item_id>basic_image_slider</item_id>
+    <item_title>Basic Slider</item_title>
+    <item_desc>Select Images and recipe post IDs to show in Basic Slider.
+Required dimension is:
+width: 905px;
+height: 386px;</item_desc>
+    <item_type>slider</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>15</id>
+    <item_id>nivo_slider</item_id>
+    <item_title>Nivo Slider</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>16</id>
+    <item_id>nivo_image_slider</item_id>
+    <item_title>Nivo Image Slider</item_title>
+    <item_desc>Select Images for Nivo Slider and give Recipe Post IDs.
+Required dimension is:
+width: 905px;
+height: 370px;</item_desc>
+    <item_type>slider</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>17</id>
+    <item_id>thumbnail_slider</item_id>
+    <item_title>Thumbnail Slider</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>18</id>
+    <item_id>thumb_slider_images</item_id>
+    <item_title>Thumbnail Slider Images</item_title>
+    <item_desc>Add images for thumbnail slider.
+Required dimension is:
+width: 905px;
+height: 370px;</item_desc>
+    <item_type>slider</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>19</id>
+    <item_id>accordion_slider</item_id>
+    <item_title>Accordion Slider</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>20</id>
+    <item_id>accor_slider_images</item_id>
+    <item_title>Accordion Slider Images</item_title>
+    <item_desc>Select Images for Accordion Slider and add links for those.
+width: 740px
+height: 425px</item_desc>
+    <item_type>slider</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>21</id>
+    <item_id>footer</item_id>
+    <item_title>Footer</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>22</id>
+    <item_id>footer_logo_image</item_id>
+    <item_title>Select Footer Logo Image</item_title>
+    <item_desc>Select an image for your footer logo.
+Should not be wider than 157px.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>23</id>
+    <item_id>footer_about_us</item_id>
+    <item_title>Footer About Us Information</item_title>
+    <item_desc>Enter about us information for footer about us portion. Will be best with around 32 charactors.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>24</id>
+    <item_id>footer_readmore_link</item_id>
+    <item_title>Footer Readmore Link</item_title>
+    <item_desc>Enter URL for readmore button in footer about us portion.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>25</id>
+    <item_id>copyright_statement</item_id>
+    <item_title>Copyright Statement</item_title>
+    <item_desc>Enter copyright statement for footer</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>26</id>
+    <item_id>footer_dev_statement</item_id>
+    <item_title>Designer and Developer Statement</item_title>
+    <item_desc>Enter Designer and Developter Statement</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>27</id>
+    <item_id>other_options</item_id>
+    <item_title>Other Options</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>28</id>
+    <item_id>weekly_special_recipe</item_id>
+    <item_title>Weekly Special Recipe</item_title>
+    <item_desc>Select Weekly Special Recipe for Weekly Special Widget</item_desc>
+    <item_type>custom_post</item_type>
+    <item_options>recipe</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>29</id>
+    <item_id>recipe_template_type</item_id>
+    <item_title>Select Single Recipe Template Type</item_title>
+    <item_desc>Select from the options how you want to show your single recipe page.</item_desc>
+    <item_type>select</item_type>
+    <item_options>Recipe Template with Sidebar, Recipe Template Full Width, Full Width with Larger Image</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>30</id>
+    <item_id>contact_options</item_id>
+    <item_title>Contact Options</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>32</id>
+    <item_id>map_latitude</item_id>
+    <item_title>Map Latitude</item_title>
+    <item_desc>Enter Google Map Latitude for your place. You can get Latitude Value From
+	&amp;lt;a href=&amp;quot;http://itouchmap.com/latlong.html&amp;quot;&amp;gt;this link&amp;lt;/a&amp;gt;</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>33</id>
+    <item_id>map_longitude</item_id>
+    <item_title>Map Longitude</item_title>
+    <item_desc>Enter Google Map Longitude for your place. You can get Longitude Value From &amp;lt;a href=&amp;quot;http://itouchmap.com/latlong.html&amp;quot;&amp;gt;this link&amp;lt;/a&amp;gt;</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>34</id>
+    <item_id>map_zoom_level</item_id>
+    <item_title>Map Zoom Level</item_title>
+    <item_desc>Enter Google Map Zoom Level</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>35</id>
+    <item_id>contact_form_heading</item_id>
+    <item_title>Contact Form Heading</item_title>
+    <item_desc>Give a heading to your contact form.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>36</id>
+    <item_id>contact_email_address</item_id>
+    <item_title>Contact Email Address</item_title>
+    <item_desc>Enter an email address for contact form to send you emails on.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+</wp_option_tree>

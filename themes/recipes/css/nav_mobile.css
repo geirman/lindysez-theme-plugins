@@ -1,0 +1,48 @@
+
+#page nav
+{
+	display: none;
+}
+
+#header,
+#footer
+{
+	background: #555;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 50px;
+}
+#header a,
+.header a {
+    background:url(../images/nav_mobile.png) right top no-repeat;
+
+	display: block;
+	width: 85px;
+	height: 30px;
+	position: absolute;
+	top: 65px;;
+	right:0px;
+	color:#660000;
+	font-size:20px;
+	font-family:arial;
+	text-decoration:none;
+}
+#header a.friends,
+.header a.friends
+{
+
+}
+#header a.right,
+{
+	left: auto;
+	right: 10px;
+}
+#content,
+.content
+{
+	padding: 20px;
+}

@@ -1,0 +1,19 @@
+/* Blue Style Sheet */
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { color: #0078a6; }
+a{ text-decoration:none; color: #0078a6; }
+.fireRed { color: #0078a6; }
+#nav-wrap .nav li ul { background-color: #2a6397; }
+#nav-wrap .nav li.active ul li a, #nav-wrap .nav li:hover ul li a { border-bottom: 1px solid #0078a6; }
+#bottom li h2 span { color: #3eb4dc; }
+
+a.readmore, .readmore { background: url(button-bg-h29.png) repeat-x; }
+#pagination a { background: url(button-bg-h29.png) repeat-x;  }
+
+#nav-wrap { background: url(nav-bg.png) repeat-x; }
+
+#nav-wrap .nav li:hover a, #nav-wrap .nav li:focus a, #nav-wrap .nav li.active a { background: url(nav-hover.png) repeat-x; }
+
+#nav-wrap .nav li { background: url(nav-seperator.png) left top no-repeat; }
+#nav-wrap .nav-more { background: url(nav-seperator.png) left top no-repeat; }
+
+#nav-wrap .social-nav li a { background: url(social-icon.png) no-repeat; }
