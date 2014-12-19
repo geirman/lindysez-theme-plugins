@@ -31,7 +31,7 @@ class Recipe_Tips_And_Techniques_Widget extends WP_Widget {
 			
 		endif;
 		
-		echo   '<div class="widget hidden-xs col-sm-4 col-md-4 recent_tips ">
+		echo   '<div class="widget col-sm-4 col-md-4 recent_tips ">
 					<h3 class="w-bot-border">';
 							echo $title;
 		echo 		'</h3>';

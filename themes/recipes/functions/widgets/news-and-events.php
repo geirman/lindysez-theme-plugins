@@ -31,7 +31,7 @@ class Recipe_News_And_Events_Widget extends WP_Widget {
 			
 		endif;
 		
-		echo   '<div class="widget hidden-xs col-sm-4 col-md-4 recent_tips foodie_news ">
+		echo   '<div class="widget col-sm-4 col-md-4 recent_tips foodie_news ">
 					<h3>';
 							echo $title;
 		echo 		'</h3>';

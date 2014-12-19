@@ -1,6 +1,7 @@
 <!-- ========== START OF SIDEBAR AREA ========== -->
-        <div class="widget hidden-xs hidden-sm col-md-4 recent_lindy_reciepe">
-                    <?php if ( ! dynamic_sidebar( 'Sidebar' )) : ?>
-                        
-                    <?php endif; ?>
-        </div><!-- end of sidebar -->
+<? global $device; ?>
+	
+	<? 	# Recipe Comment 
+		if($device=='computer'): 
+			include(get_template_directory().'/custom_tmp/computer/sidebar_det.php');					
+		endif; 	?>

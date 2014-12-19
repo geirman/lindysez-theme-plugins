@@ -3,7 +3,6 @@
 * Template Name: Home Page (What's Hot)
 */ 
 get_header(); 						
-						
 
 						if ( function_exists( 'ot_get_option' ) ) {
 							$slider_type = ot_get_option( 'slider_type');
@@ -29,70 +28,19 @@ get_header();
 						{
 								get_template_part( 'sliders/right-info-slider' );
 						}
-                        
+                   
                         ?>
     
 	<div class="wrapper">	
 		  <div class="container-fluid reciepe_type">
-			<div class="row">
-					
-				<!-- Only For Mobile -->
-				<div class="visible-xs col-xs-12 reciepe_type_main">
-				<h3>Recipe <span>Types</span></h3>
-                        		<?php
-									$terms = get_terms("recipe_type");
-									$count = count($terms);
-									if ( $count > 0 ){
-										echo '<ul>';	
-										$the_limit='1';	
-											foreach ( $terms as $term ) {
-											
-												if($the_limit=='5') { 
-													echo '<li class="reciepe_list_more more_recipe_li" ><a class="more load_more_recipe">More</a></li>';
-												 }
-												 if($the_limit>4): ?>
-													<li class='hide_currently' ><a href="<?php echo get_term_link($term->slug, 'recipe_type'); ?>"><?php echo trim($term->name); ?></a></li>
-												<?
-												else: ?>
-													<li><a href="<?php echo get_term_link($term->slug, 'recipe_type'); ?>"><?php echo trim($term->name); ?></a></li>
-												<?
-												endif;
-												
-												$the_limit++; 
-											}
-										echo '</ul>';	
-									}
-								?>	
-						
-				</div>
+			<div class="row">			
 				
-				<!-- CG: all_recipe.php Tab View -->	
-				<div class=" visible-sm col-sm-12 reciepe_type_main">
-					<h3>Recipe <span>Types</span></h3>				
-						<?php
-							$terms = get_terms("recipe_type");
-							$count = count($terms);
-							if ( $count > 0 ){
-								echo '<ul>';	
-								$the_limit='0';	
-									foreach ( $terms as $term ) {
-										
-										if($the_limit=='8') { 
-												echo '<li  class="reciepe_list_more more_recipe_li"><a class="more load_more_recipe">More</a></li>';
-										}
-										
-										if($the_limit>7): ?>
-											<li class="hide_currently <?=($the_limit%3=='0')?'':'reciepe_list';?> custom_link_add"><a href="<?php echo get_term_link($term->slug, 'recipe_type'); ?>"><?php echo trim($term->name); ?></a></li>
-									<?	else:?>
-											<li class="<?=($the_limit%3=='0')?'':'reciepe_list';?> custom_link_add"><a href="<?php echo get_term_link($term->slug, 'recipe_type'); ?>"><?php echo trim($term->name); ?></a></li>
-									<?	endif;
-										$the_limit++;
-									}
-								echo '</ul>';	
-							}
-						?>						
-				</div>				
-					
+			<? 	# Recipe types List 
+				if($device=='phone'): 
+					get_template_part( 'custom_tmp/phone/recp_list');
+				elseif($device=='tablet'): 
+					get_template_part( 'custom_tmp/tablet/recp_list');
+				endif; ?>						
 			</div>
 		</div>		
 			<div class="container-fluid hot_spicy">
@@ -170,18 +118,16 @@ get_header();
 																		</a>
 																		<div style='clear:both;'></div>
 																	</h4>
-																	<!-- Only for tablate view -->
-											                        <p class="visible-sm">
-																		<?php echo word_trim(get_the_excerpt(), 10, ''); ?>
-																			<a href="<?php the_permalink(); ?>"><?php _e('...more', 'FoodRecipe'); ?>
-																			</a>
-																	</p>
-											                        
-																	<p class='hidden-sm'>
-																		<?php echo word_trim(get_the_excerpt(), 18, ''); ?>
-																			<a href="<?php the_permalink(); ?>"><?php _e('...more', 'FoodRecipe'); ?>
-																			</a>
-																	</p>																	
+																	
+																<? 	# View More button
+																	if($device=='phone'): 
+																		get_template_part( 'custom_tmp/phone/hot_more');
+																	elseif($device=='tablet'): 
+																		get_template_part( 'custom_tmp/tablet/hot_more');												
+																	elseif($device=='computer'): 
+																		get_template_part( 'custom_tmp/computer/hot_more');
+																	endif; ?>																	
+																	 																	
 																	
 																	</div>	
 										                    </div>
@@ -195,14 +141,16 @@ get_header();
 									</div>
 							</div> 
 			            </div>
-					</div>
-					
+					</div>					
 				<!-- end of whats-hot div -->
+				
 				<div class="container-fluid reciepe_main_section">
-					<div class="row">
-						<?php if ( ! dynamic_sidebar('Homepage Bottom Bar' )) : ?>	                        
-						<?php endif; ?>
-					</div>	
+					<? 	# News tips etc					
+					if($device=='computer'): 
+						get_template_part( 'custom_tmp/computer/news_tips');
+					elseif($device=='tablet'): 
+						get_template_part( 'custom_tmp/tablet/news_tips');
+					endif; ?>					
 				</div>
 				<!-- end of home-infos div -->
 			</div>
@@ -211,14 +159,10 @@ get_header();
 		<!-- Only For Mobile -->
 		<div class="container-fluid">
 		  <div class="row">
-					<div class="visible-xs">
-						<div class="aktwal_inner">
-							<div id="accordion2" class="accordion">
-								<?php if ( ! dynamic_sidebar('Homepage Bottom Bar Mobile View' )) : ?>	                        
-								<?php endif; ?>
-							</div>
-						</div>		
-					</div>
+			<? 	# View More button
+				if($device=='phone'): 
+					get_template_part( 'custom_tmp/phone/mobile_bottom_bar');
+				endif; ?>	
 		  </div>
 		</div>	
 		

@@ -1,5 +1,8 @@
 
-<? $slider_timing = ot_get_option( 'slider_type_timing');
+<? 
+global $device;
+
+$slider_timing = ot_get_option( 'slider_type_timing');
  if(empty($slider_timing)):
 	$slider_timing='7000';
  endif;
@@ -15,28 +18,15 @@
 			<div class="wrapper">
 				<div class="container_fluid">
 					<div class="row site_footer">
-					
-			        	
-						<div class=" hidden-xs hidden-sm col-md-4 about ">
-									<?php if ( function_exists( 'ot_get_option' ) ) { ?>
-										<a href="<?php echo home_url(); ?>"><img src="<?php echo ot_get_option( 'footer_logo_image'); ?>" alt="<?php bloginfo( 'name' ); ?>" class="footer-logo" /></a>											
-										<p><?php echo ot_get_option( 'footer_about_us'); ?>...</p>
-										<a href="<?php echo get_permalink('16'); ?>" class="readmore"><?php _e('Contact Us!', 'FoodRecipe'); ?></a>
-									<?php } ?>
-						</div>
-						
-						<div class="hidden-xs hidden-sm col-md-4 twitter ">
-                        		<?php if ( ! dynamic_sidebar( 'Footer Column 2' )) : ?>
-			            		<?php endif; ?>
-                        </div>
-                       <div class="col-xs-12 col-sm-12 col-md-4 subscribe ">
-                        		<?php if ( ! dynamic_sidebar( 'Footer Column 3' )) : ?>
-			            		<?php endif; ?>
-                        </div>
-						
-						
-			            
-						
+					<? 	# footer text
+						if($device=='computer'): 
+							get_template_part( 'custom_tmp/computer/about_cont');
+						endif; 
+					?>	
+                    <div class="col-xs-12 col-sm-12 col-md-4 subscribe ">
+						<?php if ( ! dynamic_sidebar( 'Footer Column 3' )) : ?>
+						<?php endif; ?>
+                    </div>
 					</div>	
 				</div>	
 			</div>

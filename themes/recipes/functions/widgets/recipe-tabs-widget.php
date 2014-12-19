@@ -3,7 +3,7 @@
 /********* Starting Recipe Sidebar Tabs Widget For Sidebar and Homepage Bottom Area *********/
 
 class Recipe_Sidebar_Tabed_Widget extends WP_Widget {
-	
+
 	function Recipe_Sidebar_Tabed_Widget(){
 			$widget_ops = array( 'classname' => 'Recipe_Sidebar_Tabed_Widget', 'description' => __('Show Recent or Popular or Random Recipes in Tabs with thumbnail.', 'FoodRecipe'));
 			$this->WP_Widget('recipe_sidebar_widget', __('Food Recipe: Tabs for Recipes', 'FoodRecipe'), $widget_ops );
@@ -35,74 +35,22 @@ class Recipe_Sidebar_Tabed_Widget extends WP_Widget {
 					$title_new = implode(' ', $temp_title);
 					$title = $first_letter.' <span>'.$title_new.'</span>';		
 			endif;
-			
+		global $device;		
 	#for Home Page								
 	if(is_page('home')): 
-			echo '<div class="widget hidden-xs col-sm-4 col-md-4 lindy_Recipes">';
-			echo '<h3 class="w-bot-border">';
-				echo $title;
-			echo '</h3>';
-
-			echo 					'</h3>
-											<div class="nav_lindy_reciepe">
-													<ul class="nav nav-tabs">';
-															if($tab_title_one) echo '<li class="active"><a data-toggle="tab" href="#home">'. $tab_title_one .'</a></li>';
-															if($tab_title_two) echo '<li><a data-toggle="tab" href="#profile">'. $tab_title_two .'</a></li>';
-															if($tab_title_three) echo '<li><a data-toggle="tab" href="#messages">'. $tab_title_three .'</a></li>';
-			echo									'</ul>
-													<div class="tab-content">
-															<div id="home" class="tab-pane active">';
-																	$this->recipe_loop($recipe_tab_one);
-			echo									'		</div><!-- end of block div -->';
-	
-			if($tab_title_two) {			echo	'<div id="profile" class="tab-pane">';																	
-																	$this->recipe_loop($recipe_tab_two);
-											echo	'</div><!-- end of block div -->';
-			}
-													 
-			if($tab_title_three) {			echo	'<div id="messages" class="tab-pane">';
-																	$this->recipe_loop($recipe_tab_three);
-			echo									'</div>
-													</div> 
-													 <!-- end of block div -->';
-			}
-										echo	'<div class="bot-border"></div>
-											</div><!-- end of tabed div -->
-									</div><!-- end of fav-recipes widget -->';
-	
+		# Hompage recp tabs
+		if($device=='computer'): 
+			include(get_template_directory().'/custom_tmp/computer/recp_tabs.php');
+		elseif($device=='tablet'): 
+			include(get_template_directory().'/custom_tmp/tablet/recp_tabs.php');
+		endif; 	
 	else:
-	#Now for other pages like sidbar
-			echo '<div class="widget hidden-xs hidden-sm col-md-4 recent_lindy_reciepe">';
-			echo '<h2>';
-				echo $title;
-			echo '</h2>';
+		# Sidebar recp tabs
+		if($device=='computer'): 
+			include(get_template_directory().'/custom_tmp/computer/recp_side_tabs.php');
+		endif; 	
+		
 
-			echo 					'</h3>
-											<div class="nav_lindy_reciepe">
-													<ul class="nav nav-tabs">';
-															if($tab_title_one) echo '<li class="active"><a data-toggle="tab" href="#home">'. $tab_title_one .'</a></li>';
-															if($tab_title_two) echo '<li><a data-toggle="tab" href="#profile">'. $tab_title_two .'</a></li>';
-															if($tab_title_three) echo '<li><a data-toggle="tab" href="#messages">'. $tab_title_three .'</a></li>';
-			echo									'</ul>
-													<div class="tab-content">
-															<div id="home" class="tab-pane active">';
-																	$this->recipe_loop($recipe_tab_one);
-			echo									'		</div><!-- end of block div -->';
-	
-			if($tab_title_two) {			echo	'<div id="profile" class="tab-pane">';
-																	$this->recipe_loop($recipe_tab_two);
-											echo	'</div><!-- end of block div -->';
-			}
-													 
-			if($tab_title_three) {			echo	'<div id="messages" class="tab-pane">';
-																	$this->recipe_loop($recipe_tab_three);
-			echo									'</div>
-													</div> 
-													 <!-- end of block div -->';
-			}
-										echo	'<div class="bot-border"></div>
-											</div><!-- end of tabed div -->
-									<!-- end of fav-recipes widget -->';	
 	
 	
 	endif;

@@ -5,8 +5,7 @@ get_header(); ?>
 <!-- CG: page.php -->
 						<div id="left-area" class="clearfix">
                         		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                                
-								<div <?php post_class(); ?> id="page-<?php the_ID(); ?>">
+                                <div <?php post_class(); ?> id="page-<?php the_ID(); ?>">
 										<h1 class="post-title"><?php the_title(); ?></h1>
 										<p class="meta"><span class="comments"><?php comments_popup_link(__('0 Comments', 'FoodRecipe'), __('1 Comment', 'FoodRecipe'), __('% Comments', 'FoodRecipe')); ?></span> <span>|</span> <?php __('Last Update:', 'FoodRecipe'); ?> <span> <?php the_time('F j, Y'); ?></span></p>
 										<?php 
