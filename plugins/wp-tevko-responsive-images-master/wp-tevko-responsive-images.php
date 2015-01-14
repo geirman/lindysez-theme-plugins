@@ -34,10 +34,10 @@ function tevkori_get_img_alt( $image ) {
 
 function tevkori_get_picture_srcs( $image, $mappings ) {
 	$arr = array(); 
-	
+	$default = wp_get_attachment_image_src($image, 'full' );	
 	foreach ( $mappings as $size => $type ) { 
 		$image_src = wp_get_attachment_image_src($image, $type );
-		$arr[] = '<source srcset="'. $image_src[0] . ' "media="(min-width:'. $size .'px)" />';
+		$arr[] = '<source data-pin-media="'.$default[0].'" srcset="'. $image_src[0] . ' "media="(min-width:'. $size .'px)" />';
 	}
 	return implode( $arr );
 }
@@ -86,14 +86,14 @@ function tevkori_responsive_shortcode($atts) {
 	); 		
 	
 	$main_src = wp_get_attachment_image_src($imageid, 'li-slider-thumb' );
-	
+	$default = wp_get_attachment_image_src($imageid, 'full');
 	if($image_tpye=='medium'):
 	   return
 			'<picture style="'.$style.'" title="'. tevkori_get_img_alt($imageid ) .'" alt="'. tevkori_get_img_alt($imageid ) .'" data-alt="'. tevkori_get_img_alt($imageid ) .'">
 				<!--[if IE 9]><video style="display: none;"><![endif]-->'
 				. tevkori_get_picture_srcs( $imageid, $mappings_medium ) .
 				'<!--[if IE 9]></video><![endif]-->
-				<img srcset="'. $main_src[0] . '">			
+				<img data-pin-media="'.$default[0].'" srcset="'. $main_src[0] . '">			
 			</picture>';	
 	elseif($image_tpye=='small'):
 	   return
@@ -101,7 +101,7 @@ function tevkori_responsive_shortcode($atts) {
 				<!--[if IE 9]><video style="display: none;"><![endif]-->'
 				. tevkori_get_picture_srcs( $imageid, $mappings_small ) .
 				'<!--[if IE 9]></video><![endif]-->
-				<img srcset="'. $main_src[0] . '">			
+				<img data-pin-media="'.$default[0].'" srcset="'. $main_src[0] . '">			
 			</picture>';	
 	else:
 	   return
@@ -109,7 +109,7 @@ function tevkori_responsive_shortcode($atts) {
 				<!--[if IE 9]><video style="display: none;"><![endif]-->'
 				. tevkori_get_picture_srcs( $imageid, $mappings ) .
 				'<!--[if IE 9]></video><![endif]-->
-				<img srcset="'. $main_src[0] . '">			
+				<img data-pin-media="'.$default[0].'" srcset="'. $main_src[0] . '">			
 			</picture>';
 	endif;		
 		
